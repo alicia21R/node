@@ -1,52 +1,42 @@
 doctype html
-html
-  head
-    link( rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700") 
-    link(rel="stylesheet" , href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" , integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" , crossorigin="anonymous")
-    link(rel="stylesheet" , href="./registerform/register.css")
-    tite= title
-
-  body.bodywrap
-  div.textbox
-    form(action="POST" method="/register")
-      div.banner
-        h1 ZaWash Registration Form
-          p WASHER INFORMATION
-
-      div.item
-      input(type="text" id="name" name="name" placeholder="NAME")
-
-      div.item
-      input(type="text" id="bdate" name="bdate" placeholder="DATE OF BIRTH"  onclick="(this.type='date')")
-
-      div.item
-        input(id="tel" type="tel" name="phone" placeholder="PHONE NUMBER")
-
-      div.item
-        input(id="name" type="text" name="name" placeholder="ENTER YOUR NEXT OF KIN" )
-
-      div.item
-        input(id="phone" type="tel" name="phone" placeholder="CONTACT INFORMATION")
-
-      div.item
-        select.opt
-          option(selected value="0") HOME ADDRESS
-          option(value='1') katanga
-          option(value='2') kalerwe
-          option(value='3') mawanda road
-          0ption(value='4') other
-
-      div.question
-         div.item
-           input(id="phone" type="text" name="idn" placeholder="ENTER YOUR NATIONAL ID NUMBER")
-
-         div.question
-           input#radio_1(type='radio' value='none' name='terms')
-           label.radio(for='radio_2')
-           span I AGREE TO THE TERMS AND CONDITIONS
-
-         div.btn-block
-           button(type="submit" href="FAQs.html") SUBMIT
-
-
-
+head
+  title Zawash Register Form
+  link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet')
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous')
+  link(rel='stylesheet' href='register.css')
+.testbox
+  form(method='POST')
+    .banner
+      h1 ZaWash Registration Form
+    p WASHER INFORMATION
+    .item
+      // <div class="name-item">
+      input#name(type='text' name='name' placeholder='ENTER YOUR FULL NAME' required='')
+      // </div>
+    .item
+      input#bdate(name='bdate' onclick="(this.type='date')" placeholder='DATE OF BIRTH' required='')
+    .item
+      input#phone(type='tel' name='phone' placeholder='PHONE NUMBER' required='')
+    .item
+      input#name(type='text' name='name' placeholder='ENTER YOUR NEXT OF KIN' required='')
+    .item
+      input#phone(type='tel' name='phone' placeholder='CONTACT INFORMATION' required='')
+    .item
+      select.opt
+        option(selected='' value='' disabled='') HOME ADDRESS
+        option katanga
+        option kalerwe
+        option mawanda road
+        option other
+    .item
+      input#phone(type='text' name='idn' placeholder='ENTER YOUR NATIONAL ID NUMBER' required='')
+    .question
+      input#radio_1(type='radio' name='terms')
+      label.radio(for='radio_1')
+        span I AGREE TO THE TERMS AND CONDITIONS
+    .btn-block
+      button(type='submit') SUBMIT
+footer
+  .footer
+    span.text-muted
+      strong &copy; 2021 Zaabu Washing Limited.
