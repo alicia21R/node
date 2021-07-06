@@ -1,0 +1,61 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title=title
+  // style css
+  link(rel='stylesheet' href='login.css')
+  // Bootstrap
+  link(rel='stylesheet' href='bootstrap.min.css')
+  // Responsive
+  link(rel='stylesheet' href='responsive.css')
+  // fevicon
+  link(rel='icon' href='images/fevicon.png' type='image/gif')
+  // Scrollbar Custom CSS
+  link(rel='stylesheet' href='jquery.mCustomScrollbar.min.css')
+  // Tweaks for older IEs
+  link(rel='stylesheet' href='/https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+.loader_bg
+  .loader
+    img(src='/images/loading.gif' alt='#')
+// end loader
+// begin main
+main
+  form(method="POST")
+    h1(style='margin: 20px;') LOGIN 
+    .icon
+      i.fas.fa-user-circle
+    .formcontainer
+      .container
+        input(type='text' placeholder='ENTER USERNAME ' name='uname' required='')
+        input(type='password' placeholder='ENTER PASSWORD ' name='psw' required='')
+      button(type='submit' style='margin:20px')
+        strong SIGN UP
+      .container
+        label(style='padding-left: 15px')
+          input(type='checkbox' checked='checked' name='remember')
+          |  REMEMBER ME
+        span.psw
+          a(href='#' style='color: #f68b01;') FORGOT PASSWORD?
+          
+// bottom nav
+nav.navbar.navbar-expand-sm.navbar-dark.rounded
+  .container-fluid
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarsExample10.collapse.navbar-collapse.justify-content-md-center
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='../index/index.html' style='color: #080704;') HOME
+    div
+      span &copy; 2021 ZAABU WASHING LIMITED All Rights Reserved
+
+script(src='/js/jquery.min.js')
+script(src='/js/popper.min.js')
+script(src='/js/bootstrap.bundle.min.js')
+script(src='/js/jquery-3.0.0.min.js')
+script(src='/js/plugin.js')
+// sidebar
+script(src='/js/jquery.mCustomScrollbar.concat.min.js')
+script(src='/js/custom.js')
+script(src='https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
